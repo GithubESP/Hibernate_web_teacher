@@ -14,7 +14,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 
-@WebFilter(urlPatterns = "/*")
+@WebFilter(urlPatterns = "/20201220")
 public class OpenSessionInViewFilter extends HttpFilter implements Filter {
        
 	private Session session;

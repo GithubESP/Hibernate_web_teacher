@@ -30,7 +30,8 @@
 <body>
 <%--     <jsp:include page="/fragment/topMVC.jsp" /> --%>
     <header>
-        <h1 class="fa-solid fa-users">查詢所有會員</h1><a style="position: absolute; right: 0;" class="fa-solid fa-user-plus" href=${request.getContextPath()}addAccountControllersafe?id=${accounts.get(accounts.size()-1).getId()+1}>新增</a>
+   <!--      <h1 class="fa-solid fa-users">查詢所有會員</h1><a style="position: absolute; right: 0;" class="fa-solid fa-user-plus" href=${request.getContextPath()}addAccountControllersafe?id=${accounts.get(0).getId()+1}>新增</a>-->
+        <h1 class="fa-solid fa-users">查詢所有會員</h1><a style="position: absolute; right: 0;" class="fa-solid fa-user-plus" href=${request.getContextPath()}addAccountControllersafe?id=${accounts.get(accounts.size()-1).getId()+1}>新增</a> 
 <a style="position: relative; right: 15;" class="fa-solid fa-house" href="http://localhost:8080/SecondServlet/index.html">首頁</a>
     </header>
     <table id="table_id" class="display">

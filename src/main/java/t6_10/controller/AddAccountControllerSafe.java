@@ -26,6 +26,7 @@ public class AddAccountControllerSafe extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Integer id=Integer.valueOf(req.getParameter("id"));
+		System.out.println(id);
 		String account=req.getParameter("account");
 		String password=req.getParameter("password");
 		Part photo = req.getPart("photo");
