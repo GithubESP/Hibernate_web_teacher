@@ -11,16 +11,16 @@ public class SessionFactoryListener implements ServletContextListener {
     public SessionFactoryListener() {
     }
 
-    
-    public void contextInitialized(ServletContextEvent sce)  { 
-    	HibernateUtil.getSessionFactory();
-    	System.out.println("Create SessionFactory!!!");
-    }
 	
     public void contextDestroyed(ServletContextEvent sce)  { 
     	HibernateUtil.closeSessionFactory();
     	System.out.println("SessionFactory Closed !!");
     }
 
+	
+    public void contextInitialized(ServletContextEvent sce)  { 
+        HibernateUtil.getSessionFactory();
+        System.out.println("Create SessionFactory!!!");
+    }
 	
 }

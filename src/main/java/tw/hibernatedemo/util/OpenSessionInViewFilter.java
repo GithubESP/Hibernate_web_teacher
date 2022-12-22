@@ -14,7 +14,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 
-@WebFilter(urlPatterns = "/*")
+@WebFilter(urlPatterns = {"/FindTemple","/InsertTempleData.do","/RemoveTemple.do","/SellectAllServlet.do","/UpdateTempleData.do"})
+//{"/FindTemple,/InsertTempleData.do,/RemoveTemple.do,/SellectAllServlet.do,/UpdateTempleData.do"}
 public class OpenSessionInViewFilter extends HttpFilter implements Filter {
        
 	private Session session;
@@ -40,5 +41,10 @@ public class OpenSessionInViewFilter extends HttpFilter implements Filter {
 		}finally {
 			System.out.println("Session close!!");
 		}
+		
+		
 	}
+
+	
+
 }
