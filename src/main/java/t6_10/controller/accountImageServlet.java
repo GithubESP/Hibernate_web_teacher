@@ -16,8 +16,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import t6_10.bean.Account;
-import t6_10.dao.AccountDao;
-import t6_10.impl.AccountDaoImpl;
+import t6_10.service.AccountService;
+import t6_10.impl.AccountServiceImpl;
 
 @WebServlet("/controller/toImage")
 public class accountImageServlet extends HttpServlet {
@@ -39,14 +39,14 @@ public class accountImageServlet extends HttpServlet {
 			// 讀取瀏覽器傳送來的主鍵
 			String id = request.getParameter("id");
 			// 讀取瀏覽器傳送來的type，以分辨要處理哪個表格
-			AccountDao accountDao = new AccountDaoImpl();
+			AccountService accountDao = new AccountServiceImpl();
 			int nId = 0;
 			try {
 				nId = Integer.parseInt(id);
 			} catch(NumberFormatException ex) {
 				;
 			}
-			Account bean = accountDao.select(nId); ///findById
+			Account bean = accountDao.showAccount(nId); ///findById
 			if (bean != null) {
 				blob = bean.getImage();
 				System.out.println("圖片"+nId+" 大小 : "+blob.length());
@@ -67,7 +67,7 @@ public class accountImageServlet extends HttpServlet {
 			}
 			log.info("送出圖片, id=" + id);
 		} catch (SQLException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 		} finally{
 			if (is != null) is.close();
 			if (os != null) os.close();
