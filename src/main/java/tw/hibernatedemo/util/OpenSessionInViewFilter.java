@@ -14,12 +14,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
 
-<<<<<<< HEAD
 @WebFilter(urlPatterns = {"/FindTemple","/InsertTempleData.do","/RemoveTemple.do","/SellectAllServlet.do","/UpdateTempleData.do"})
 //{"/FindTemple,/InsertTempleData.do,/RemoveTemple.do,/SellectAllServlet.do,/UpdateTempleData.do"}
-=======
-@WebFilter(urlPatterns = "/20201220")
->>>>>>> 739faa2006f92fd471d43d2007cfb17111855da5
+
 public class OpenSessionInViewFilter extends HttpFilter implements Filter {
        
 	private Session session;
