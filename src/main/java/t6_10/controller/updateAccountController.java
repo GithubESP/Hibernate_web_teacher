@@ -36,8 +36,8 @@ public class updateAccountController extends HttpServlet {
 		try {
 			Blob image = GlobalService.fileToBlob(in, size);
 			AccountService accountService=new AccountServiceImpl();
-			AccountDao accountDao = new AccountDaoImpl();
-			Account accounts = accountDao.select(id);
+			Account accounts = accountService.showAccount(id);
+
 	
 			if (size!=0 && (type.equals("image/jpeg")||type.equals("image/png"))) {
 				accounts.setImage(image);
@@ -46,6 +46,7 @@ public class updateAccountController extends HttpServlet {
 			accounts.setAccount(account);
 			accounts.setPassword(password);
 			accounts.setId(id);
+	
 			accountService.modify(accounts);
 			resp.sendRedirect(req.getContextPath()+"/showAllAccountControllersafe");
 		} catch (IOException | SQLException e) {

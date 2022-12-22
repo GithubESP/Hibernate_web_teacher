@@ -9,10 +9,11 @@ import tw.hibernatedemo.util.HibernateUtil;
 
 public class AccountManagerDaoImpl implements AccountManagerDao{
 	
-	private SessionFactory factory;
+	private SessionFactory factory=HibernateUtil.getSessionFactory();
+	private Session session = factory.getCurrentSession();
+	
 	
 	public AccountManagerDaoImpl() {
-		this.factory =  HibernateUtil.getSessionFactory();
 	}
 	
 //	public AccountManagerDaoImpl(Session session) {
@@ -26,6 +27,6 @@ public class AccountManagerDaoImpl implements AccountManagerDao{
 	
 	@Override
 	public AccountManager select(String username) {
-		return factory.getCurrentSession().get(AccountManager.class, username);
+		return session.get(AccountManager.class, username);
 	}
 }
