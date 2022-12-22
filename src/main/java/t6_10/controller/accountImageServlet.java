@@ -67,7 +67,7 @@ public class accountImageServlet extends HttpServlet {
 			}
 			log.info("送出圖片, id=" + id);
 		} catch (SQLException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
 		} finally{
 			if (is != null) is.close();
 			if (os != null) os.close();
