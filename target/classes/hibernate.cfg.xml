@@ -28,21 +28,22 @@
         <!-- setting auto generate table: update/validate  -->
 <!--         <property name="hbm2ddl.auto">update</property> -->
         
-<!--          source mapping in xml file -->
-<!--         <mapping resource="tw/hibernatedemo/model/CompanyBean.hbm.xml"/> -->
+        <!--  source mapping in xml file -->
+        <mapping resource="tw/hibernatedemo/model/CompanyBean.hbm.xml"/>
         
-<!--          class mapping -->
-<!--         <mapping class="tw.hibernatedemo.model.Department"/> -->
-<!--         <mapping class="tw.hibernatedemo.model.Instructor"/> -->
-<!--         <mapping class="tw.hibernatedemo.model.InstructorDetail"/> -->
-<!--         <mapping class="tw.hibernatedemo.model.Books"/> -->
-<!--         <mapping class="tw.hibernatedemo.model.BookUsers"/> -->
-<!--         <mapping class="tw.hibernatedemo.model.MyGroup"/> -->
-<!--         <mapping class="tw.hibernatedemo.model.Friend"/> -->
-<!--         <mapping class="tw.hibernatedemo.model.Employee"/> -->
-<!--         <mapping class="tw.hibernatedemo.model.Member"/> -->
-   	    	<mapping class="t6_10.bean.AccountManager"/>
-         	<mapping class="t6_10.bean.Account"/>           
+        <!--  class mapping -->
+        <mapping class="tw.hibernatedemo.model.Department"/>
+        <mapping class="tw.hibernatedemo.model.Instructor"/>
+        <mapping class="tw.hibernatedemo.model.InstructorDetail"/>
+        <mapping class="tw.hibernatedemo.model.Books"/>
+        <mapping class="tw.hibernatedemo.model.BookUsers"/>
+        <mapping class="tw.hibernatedemo.model.MyGroup"/>
+        <mapping class="tw.hibernatedemo.model.Friend"/>
+        <mapping class="tw.hibernatedemo.model.Employee"/>
+        <mapping class="tw.hibernatedemo.model.Member"/>
+        <mapping class="t6_6.model.TempleBean"/>
+             
+        
         
     
         
