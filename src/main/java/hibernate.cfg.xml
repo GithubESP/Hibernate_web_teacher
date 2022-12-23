@@ -43,6 +43,9 @@
 		<!-- <mapping class="tw.hibernatedemo.model.Friend" /> -->
 		<!-- <mapping class="tw.hibernatedemo.model.Employee" /> -->
 		<!-- <mapping class="tw.hibernatedemo.model.Member" /> -->
+		<mapping class="t6_10.bean.AccountManager" />
+		<mapping class="t6_10.bean.Account" />
+		<mapping class="t6_6.model.TempleBean" />
 
 	</session-factory>
 </hibernate-configuration>
