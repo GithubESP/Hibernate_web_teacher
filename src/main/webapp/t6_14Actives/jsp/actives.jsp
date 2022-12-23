@@ -50,7 +50,7 @@
 	<a href="<c:url context='${pageContext.request.contextPath}' value='/showActiveController?id=${active.activeID}'></c:url>">修改</a></td>
         </tr>
          </c:forEach>
-         <input type="button" value="新增" onclick="location.href='/Temple/t6_14Actives/jsp/addViewInfo.jsp'">
+         <input type="button" value="新增" onclick="location.href='/Hibernate_web_teacher/t6_14Actives/jsp/addViewInfo.jsp'">
       </tbody>
     </table>
   </div>
