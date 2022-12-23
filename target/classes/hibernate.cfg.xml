@@ -4,12 +4,10 @@
 		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-
 		<property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
 		<property name="hibernate.connection.password">sixteam</property>
 		<property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=sixteamDB;trustServerCertificate=true</property>
 		<property name="hibernate.connection.username">sa</property>
-
 		<property name="hibernate.dialect">org.hibernate.dialect.SQLServer2016Dialect</property>
 
 
@@ -29,25 +27,22 @@
 		<!-- <property name="hbm2ddl.auto">update</property> -->
 
 		<!-- source mapping in xml file -->
-		<mapping resource="tw/hibernatedemo/model/CompanyBean.hbm.xml" />
+		<!-- <mapping resource="tw/hibernatedemo/model/CompanyBean.hbm.xml" /> -->
 
 		<!-- class mapping -->
-		<mapping class="tw.hibernatedemo.model.Department" />
-		<mapping class="tw.hibernatedemo.model.Instructor" />
-		<mapping class="tw.hibernatedemo.model.InstructorDetail" />
-		<mapping class="tw.hibernatedemo.model.Books" />
-		<mapping class="tw.hibernatedemo.model.BookUsers" />
-		<mapping class="tw.hibernatedemo.model.MyGroup" />
-		<mapping class="tw.hibernatedemo.model.Friend" />
-		<mapping class="tw.hibernatedemo.model.Employee" />
-		<mapping class="tw.hibernatedemo.model.Member" />
-		<mapping class="t6_6.model.TempleBean" />
-		<mapping class="t6_10.bean.AccountManager" />
-		<mapping class="t6_10.bean.Account" />
+		<mapping class="t6_21class.bean.ClassBean" />
+		<mapping class="t6_21class.bean.MemberBean" />
+		<mapping class="t6_21class.bean.OrderBean" />
 
-
-
-
+		<!-- <mapping class="tw.hibernatedemo.model.Department" /> -->
+		<!-- <mapping class="tw.hibernatedemo.model.Instructor" /> -->
+		<!-- <mapping class="tw.hibernatedemo.model.InstructorDetail" /> -->
+		<!-- <mapping class="tw.hibernatedemo.model.Books" /> -->
+		<!-- <mapping class="tw.hibernatedemo.model.BookUsers" /> -->
+		<!-- <mapping class="tw.hibernatedemo.model.MyGroup" /> -->
+		<!-- <mapping class="tw.hibernatedemo.model.Friend" /> -->
+		<!-- <mapping class="tw.hibernatedemo.model.Employee" /> -->
+		<!-- <mapping class="tw.hibernatedemo.model.Member" /> -->
 
 	</session-factory>
 </hibernate-configuration>
