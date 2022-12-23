@@ -15,7 +15,7 @@ form {
 </head>
 <body>
 <div align="RIGHT">
-<a  href="http://localhost:8080/SecondServlet/index.html">回主頁</a>
+<a  href="http://localhost:8080/Hibernate_web_teacher/index.html">回主頁</a>
 <!--  ShowAllPeopleServlet  -->
 <a href='<c:url value="/t6_23/controller/showPeople.do" />'>查詢資料(後臺用)</a>
 <a href='<c:url value="/t6_23/InsertPeopleForm_23.jsp" />' >新增資料</a>
