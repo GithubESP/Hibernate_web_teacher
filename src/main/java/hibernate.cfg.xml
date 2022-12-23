@@ -47,6 +47,7 @@
 		<mapping class="t6_10.bean.Account" />
 		<mapping class="t6_6.model.TempleBean" />
 		<mapping class="t6_23.bean.PeopleBean_23"/>
+		<mapping class="t6_14Actives.model.Actives"/>
 
 	</session-factory>
 </hibernate-configuration>
