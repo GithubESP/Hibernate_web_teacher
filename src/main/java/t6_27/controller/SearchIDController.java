@@ -24,7 +24,7 @@ public class SearchIDController extends HttpServlet {
 		System.out.println(post);
 		
 		req.setAttribute("post", post);
-		req.getRequestDispatcher("/JSP/UpdatePost.jsp").forward(req, resp);
+		req.getRequestDispatcher("/t6_27JSP/UpdatePost.jsp").forward(req, resp);
 	}
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

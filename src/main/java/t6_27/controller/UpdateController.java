@@ -23,7 +23,7 @@ import t6_27.service.PostService;
 
 
 
-@WebServlet("/UpdateController")
+@WebServlet("/t6_27JSP/UpdateController")
 public class UpdateController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;

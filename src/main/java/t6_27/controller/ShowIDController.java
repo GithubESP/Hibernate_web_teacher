@@ -23,7 +23,7 @@ public class ShowIDController extends HttpServlet {
 		Post post=postService.searchById(postId);
 		
 		req.setAttribute("post", post);
-		req.getRequestDispatcher("/JSP/ShowContent.jsp").forward(req, resp);
+		req.getRequestDispatcher("/t6_27JSP/ShowContent.jsp").forward(req, resp);
 	}
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

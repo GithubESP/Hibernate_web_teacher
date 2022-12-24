@@ -31,7 +31,7 @@ public class SearchAllController extends HttpServlet {
 		PostDao postService = new PostDaoImpl();
 		List<Post> post = postService.searchAll();
 		req.setAttribute("post", post);
-		req.getRequestDispatcher("/JSP/SearchAll.jsp").forward(req, resp);
+		req.getRequestDispatcher("/t6_27JSP/SearchAll.jsp").forward(req, resp);
 		return;
 	}
 

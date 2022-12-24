@@ -22,7 +22,7 @@ public class DeleteController extends HttpServlet {
 		postService.delete(postId);
 		System.out.println(postId);
 		req.setAttribute("delete", postId);
-		req.getRequestDispatcher("/JSP/DeleteOK.jsp").forward(req, resp);
+		req.getRequestDispatcher("/t6_27JSP/DeleteOK.jsp").forward(req, resp);
 	}
 
 }

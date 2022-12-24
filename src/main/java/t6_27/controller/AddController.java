@@ -45,7 +45,7 @@ public class AddController extends HttpServlet {
 		System.out.println(post.toString());
 		
 		req.setAttribute("add", post);
-		req.getRequestDispatcher("/JSP/AddOK.jsp").forward(req, resp);
+		req.getRequestDispatcher("/t6_27JSP/AddOK.jsp").forward(req, resp);
 		return;		
 	}
 	
