@@ -1,4 +1,4 @@
-package controller;
+package t6_27.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 //import bean.Account;
-import bean.Post;
+import t6_27.bean.Post;
 //import dao.AccountDao;
-import dao.PostDao;
+import t6_27.dao.PostDao;
 //import impl.AccountDaoImpl;
 //import impl.AccountServiceImpl;
-import impl.PostDaoImpl;
-import impl.PostServiceImpl;
+import t6_27.impl.PostDaoImpl;
+import t6_27.impl.PostServiceImpl;
 //import service.AccountService;
 //import service.GlobalService;
-import service.PostService;
+import t6_27.service.PostService;
 
 
 

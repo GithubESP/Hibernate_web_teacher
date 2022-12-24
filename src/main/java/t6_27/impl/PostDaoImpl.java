@@ -1,4 +1,4 @@
-package impl;
+package t6_27.impl;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 
-import bean.Post;
-import dao.PostDao;
-import util.HibernateUtil;
+import t6_27.bean.Post;
+import t6_27.dao.PostDao;
+import tw.hibernatedemo.util.HibernateUtil;
 
 public class PostDaoImpl implements PostDao {
 	private SessionFactory factory;

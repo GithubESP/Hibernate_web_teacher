@@ -1,4 +1,4 @@
-package bean;
+package t6_27.bean;
 
 import java.io.Serializable;
 import java.sql.Blob;

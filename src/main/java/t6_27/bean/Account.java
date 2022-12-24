@@ -1,4 +1,4 @@
-package bean;
+package t6_27.bean;
 
 import java.sql.Blob;
 import java.util.LinkedHashSet;

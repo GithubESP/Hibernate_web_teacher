@@ -1,4 +1,4 @@
-package controller;
+package t6_27.controller;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bean.Post;
-import impl.PostServiceImpl;
-import service.PostService;
+import t6_27.bean.Post;
+import t6_27.impl.PostServiceImpl;
+import t6_27.service.PostService;
 
 
 @WebServlet("/ShowIDController")

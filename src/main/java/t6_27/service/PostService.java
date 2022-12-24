@@ -1,8 +1,8 @@
-package service;
+package t6_27.service;
 
 import java.util.List;
 
-import bean.Post;
+import t6_27.bean.Post;
 
 public interface PostService {
 	public List<Post> searchAll();

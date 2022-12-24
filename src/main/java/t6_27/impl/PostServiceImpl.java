@@ -1,9 +1,9 @@
-package impl;
+package t6_27.impl;
 
 import java.util.List;
-import bean.Post;
-import dao.PostDao;
-import service.PostService;
+import t6_27.bean.Post;
+import t6_27.dao.PostDao;
+import t6_27.service.PostService;
 
 public class PostServiceImpl implements PostService {
 	PostDao postDao = new PostDaoImpl();

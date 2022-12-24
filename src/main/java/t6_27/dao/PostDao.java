@@ -1,7 +1,7 @@
-package dao;
+package t6_27.dao;
 
 import java.util.List;
-import bean.Post;
+import t6_27.bean.Post;
 
 
 public interface PostDao {

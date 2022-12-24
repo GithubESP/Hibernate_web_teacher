@@ -1,4 +1,4 @@
-package controller;
+package t6_27.controller;
 
 import java.io.IOException;
 import java.util.List;
@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-import bean.Post;
-import dao.PostDao;
-import impl.PostDaoImpl;
+import t6_27.bean.Post;
+import t6_27.dao.PostDao;
+import t6_27.impl.PostDaoImpl;
 
 @WebServlet("/SearchAllController")
 public class SearchAllController extends HttpServlet {
