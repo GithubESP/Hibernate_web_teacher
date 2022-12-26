@@ -57,7 +57,8 @@
                     <td>帳號:<input type='text' name='account' value="${account.account}"/></td>
                     <td>密碼:<input type="password" name="password"  style="border:0px;background:rgba(0, 0, 0, 0);text-align:center;"  value="${account.password}"></td>
                     <td>
-                    <img height='100' width='80' src="<c:url value='/controller/toImage?id=${account.id}' />">
+       <%--             <img height='100' width='80' src="<c:url value='/controller/toImage?id=${account.id}' />"> --%>
+                    <img height='100' width='80' src="<c:url value='/t6_10_imgs/0.png' />">
 					</td>
                     <td>
                     <input type='file' name='photo' />

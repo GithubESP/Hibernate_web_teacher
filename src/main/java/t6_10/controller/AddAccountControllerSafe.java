@@ -1,5 +1,7 @@
 package t6_10.controller;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Blob;
@@ -34,14 +36,28 @@ public class AddAccountControllerSafe extends HttpServlet {
 		long size = photo.getSize();
 		String type = photo.getContentType();
 		try {
+	
+			
 			Blob image = GlobalService.fileToBlob(in, size);
 			AccountService accountService=new AccountServiceImpl();
-//			AccountDao accountDao = new AccountDaoImpl();
 			Account accounts = new Account();
-	
-			if (type.equals("image/jpeg")||type.equals("image/png")) {
+			
+			
+			if ((type.equals("image/jpeg")||type.equals("image/png"))&&size != 0) {
+				accounts.setImage(image);
+				System.out.println("設定圖片");
+			}else {
+				String picPath = "C:\\Users\\User\\Desktop\\imgs\\0.png";
+				in = new FileInputStream(picPath);
+				File imgFile = new File(picPath);
+				size = imgFile.length();
+				System.out.println("SIZE 0 進");
+				System.out.println(in+"+"+size);
+				image = GlobalService.fileToBlob(in, size);
 				accounts.setImage(image);
 			}
+			
+			
 			accounts.setAccount(account);
 			accounts.setPassword(password);
 			accounts.setId(id);
