@@ -14,9 +14,6 @@ public class AccountServiceImpl implements AccountService {
 	private AccountDao accountDao;
 	SessionFactory factory = HibernateUtil.getSessionFactory();
 
-//	public AccountServiceImpl(Session session) {
-//		accountDao=new AccountDaoImpl();
-//	}
 	public AccountServiceImpl() {
 		accountDao = new AccountDaoImpl();
 	}
@@ -62,13 +59,10 @@ public class AccountServiceImpl implements AccountService {
 	public Account modify(Account account) {
 		Session session = factory.getCurrentSession();
 		try {
-			System.out.println(1);
 			session.beginTransaction();
-			System.out.println(2);
 			System.out.println(account);
 			System.out.println("modify"+session);
 			Account result = accountDao.update(account);
-			System.out.println(3);
 			session.getTransaction().commit();
 			return result;
 		} catch (Exception e) {

@@ -20,6 +20,8 @@ public class GlobalService {
 	}
 	
 	
+	
+	
 //	public static Blob fileToBlob(String imageFileName) throws IOException, SQLException {
 //		File imageFile = new File(imageFileName);
 //		long size = imageFile.length();

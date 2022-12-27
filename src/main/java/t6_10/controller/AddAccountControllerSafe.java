@@ -43,16 +43,19 @@ public class AddAccountControllerSafe extends HttpServlet {
 			Account accounts = new Account();
 			
 			
-			if ((type.equals("image/jpeg")||type.equals("image/png"))&&size != 0) {
+			if ((type.equals("image/jpeg")||type.equals("image/png")) && size != 0) {
 				accounts.setImage(image);
 				System.out.println("設定圖片");
 			}else {
-				String picPath = "C:\\Users\\User\\Desktop\\imgs\\0.png";
+
+				String picPath = "C:\\hibernate\\workspace\\Hibernate_web_teacher\\src\\main\\webapp\\t6_10_imgs\\0.png";
+//				C:\hibernate\workspace\Hibernate_web_teacher\src\main\webapp\t6_10_imgs\0.png
+		
+				System.out.println(picPath+"4564546");
 				in = new FileInputStream(picPath);
 				File imgFile = new File(picPath);
 				size = imgFile.length();
-				System.out.println("SIZE 0 進");
-				System.out.println(in+"+"+size);
+				System.out.println(in+" 預設圖片 "+size);
 				image = GlobalService.fileToBlob(in, size);
 				accounts.setImage(image);
 			}

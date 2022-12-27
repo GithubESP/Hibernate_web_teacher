@@ -14,7 +14,7 @@
 <!-- 下列敘述設定變數funcName的值為OUT，top.jsp 會用到此變數 -->
 <c:set var="funcName" value="OUT" scope="session"/>
 <!-- 引入共同的頁首 -->  
-<jsp:include page="/fragment/topMVC.jsp" />
+	<jsp:include page="/t6_21class/fragment/topMVC.jsp" />
 
 <c:if test='${ not empty logoutBean}' >
      ${ logoutBean.getLogout()  }

@@ -79,7 +79,7 @@ function Abort() {
 
 <body>
 	<c:set var="funcName" value="CHE" scope="session" />
-	<jsp:include page="/fragment/topMVC.jsp" />
+	<jsp:include page="/t6_21class/fragment/topMVC.jsp" />
 
 	<c:choose>
 		<c:when test="${shoppingCart.getSubtotal() > 0}">

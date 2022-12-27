@@ -9,7 +9,8 @@
 		<property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=sixteamDB;trustServerCertificate=true</property>
 		<property name="hibernate.connection.username">sa</property>
 		<property name="hibernate.dialect">org.hibernate.dialect.SQLServer2016Dialect</property>
-
+		
+		<property name="hbm2ddl.auto">update</property>
 
 		<!-- 後面學到 current Session 再打開 -->
 		<property name="current_session_context_class">thread</property>
@@ -49,6 +50,8 @@
 		<mapping class="t6_23.bean.PeopleBean_23"/>
 		<mapping class="t6_14Actives.model.Actives"/>
 		<mapping class="t6_27.bean.Post"/>
+			<mapping class="model.Item" />
+		
 
 	</session-factory>
 </hibernate-configuration>

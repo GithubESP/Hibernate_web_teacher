@@ -62,7 +62,7 @@ table, h1 {
 
 <body>
 	<c:set var="funcName" value="CHE" scope="session" />
-	<jsp:include page="/fragment/topMVC.jsp" />
+	<jsp:include page="/t6_21class/fragment/topMVC.jsp" />
 
 	<h1>結帳總額</h1>
 	</header>

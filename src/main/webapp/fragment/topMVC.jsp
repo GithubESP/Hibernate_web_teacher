@@ -1,80 +1,58 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
-<script src="https://kit.fontawesome.com/f7498d7580.js"
-	crossorigin="anonymous"></script>
-
+<link href="<c:url value='/css/eDM.css' />" rel="stylesheet"
+	type="text/css" />
+<script src="<c:url value='/javascript/jquery-1.9.1.js' />"></script>
+<link href="<c:url value='/javascript/eDM.js' />" rel="stylesheet"
+	type="text/css" />
 
 <c:set var='debug' value='true' scope='application' />
-
-<table class='menuOuter' style="float: left">
+<table class='menuOuter'>
 	<tr height="48px">
-
-		<div style="display: inline">
-			<c:choose>
-
-				<c:when test="${ funcName != 'BMT' }">
-					<span> <a class="fa-solid fa-wrench"
-						href="<c:url value='/controller/classListMaintainServlet' />">
-							維護</a>
-				</c:when>
-				<c:otherwise>
-                      維護
-                </c:otherwise>
-			</c:choose>
-		</div>
-
-		<div style="display: inline">
-			<c:choose>
-				<c:when test="${ funcName != 'SHO' }">
-
-					<label> <a
-						href="<c:url value='/controller/classShoppingList' />"><i
-							class="fa-solid fa-cart-shopping"></i> 購物</a></label>
-
-				</c:when>
-				<c:otherwise>
-                    購物
-                </c:otherwise>
-			</c:choose>
-		</div>
+<%--		<td width="60px" rowspan='2'><img width="60px" height="40px"
+			src="<c:url value='/images/BookStore.gif' />"></td>--%>
+		<td>
+			<table class='menuInner'>
+				<tr>
+					<td class='menuData'>
+						<div class='menu'></div>
+					</td>
+					
+					<td class='menuData'>
+						<div class='menu'>
 
 
-		<div style="display: inline">
-			<c:if test="${empty LoginOK}">
-				<label> <a href="<c:url value='/login.jsp' />"><i
-						class="fa-solid fa-right-to-bracket"></i> 登入</a></label>
-			</c:if>
-		</div>
+							<a href="<c:url value='/index.jsp' />"> 商品查詢頁面 </a>
 
-		<div style="display: inline">
-			<label><a href="<c:url value='/index.html' />"><i
-					class="fa-sharp fa-solid fa-house"></i> 主頁</a> </label>
+						</div>
+					</td>
+					
+					
+				
+<%-- 					<td class='menuData'>
+						<div class='menu'>
 
-			<div style="display: inline">
-				<c:choose>
-					<c:when test="${ funcName != 'CHE' }">
-						<label><a
-							href="<c:url value='/t6_21class/ShowShoppingCartContent.jsp' />"><i
-								class="fa-sharp fa-solid fa-bag-shopping"></i>結帳</a></label>
+							<a href="<c:url value='/_04_ShoppingCart/ShowCartContent.jsp' />"> 
+								結帳 </a>
 
-					</c:when>
-					<c:otherwise>
-                    結帳
-                </c:otherwise>
-				</c:choose>
-			</div>
 
-			<c:choose>
-				<c:when test="${ ! empty LoginOK }">
-					<label><a href="<c:url value='/t6_21class/logout.jsp' />"><i
-							class="fa-solid fa-right-from-bracket"></i> 登出 </a></label>
-				</c:when>
-				<c:otherwise>
-				</c:otherwise>
-			</c:choose>
-			<small>${pageContext.session.id}</small>
+
+
+						</div>
+					</td>--%>
+<%-- 					<td class='menuData'>
+						<div class='menu'>
+
+							<a href="<c:url value='/_05_orderProcess/orderList.do' />"> 
+								訂單 </a>
+
+						</div>
+					</td>--%>
+			</table>
+	<tr>
+		<td>
+			<hr style="color: #f00; background-color: #f00; height: 2px;">
+		</td>
 	</tr>
 </table>
-<hr>
