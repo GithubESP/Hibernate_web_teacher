@@ -1,15 +1,87 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>管理者登入頁面</title>
-  </head>
-  <body>
-    <form action="/Hibernate_web_teacher/accountLogin" method="post">
-      帳號:<input type="text" name="username" /><br />
-      密碼:<input type="password" name="password" /><br />
-<!--       <p>${errorMsgMap.LoginError}</p> -->
-      <input type="submit" value="登錄" />
-    </form>
-  </body>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>管理者登入頁面</title>
+</head>
+
+<!-- 	 action="/Hibernate_web_teacher/accountLogin2" method="post"-->
+
+<body>
+	<form id="loginForm">
+		帳號:<input type="text" id="username" name="username" /><br /> 密碼:<input type="password" id="password"
+			name="password" /><br />
+		<!--       <p>${errorMsgMap.LoginError}</p> -->
+		<input type="button" value="登錄" id="loginSend" />
+	</form>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+	<script>
+		$(function () {
+			$("#loginSend").on("click", function () {
+				let pws = $("#password").val();
+				let user = $("#username").val();
+				console.log(pws + "  " + user)
+				$.ajax({
+					url: "/Hibernate_web_teacher/accountLogin2",
+					type: "post",
+					data: {
+						"username": user,
+						"password": pws
+					},
+					dataType: "json",
+				}).done(function (data) {
+
+					console.log(data)
+
+					if (data.res == 1) { console.log(1) }
+					else { console.log(0) }
+				})
+
+			})
+		})
+	</script>
+
+	<!-- 	<script> -->
+	// // Get the login form
+	// const loginForm = document.getElementById('loginForm');
+
+	// // Add a submit event listener to the form
+	// loginForm.addEventListener('submit', (event) => {
+	// // Prevent the default submit action
+	// event.preventDefault();
+
+	// // Get the username and password values
+	// const username = document.getElementById('username').value;
+	// const password = document.getElementById('password').value;
+
+	// // Create an object to send with the POST request
+	// const data = { username, password };
+
+	// // Send a POST request to the server with the login credentials
+	// fetch('/Hibernate_web_teacher/accountLogin2', {
+	// method: 'POST',
+	// body: JSON.stringify(data),
+	// headers: {
+	// 'Content-Type': 'application/json'
+	// }
+	// })
+	// .then((response) => {
+	// // If the login was successful, redirect the user
+	// if (response.ok) {
+	// window.location.href = '/showAllAccountControllersafe';
+	// } else {
+	// // Otherwise, display an error message
+	// alert('帳號或密碼錯誤');
+	// }
+	// })
+	// .catch((error) => {
+	// console.error(error);
+	// });
+	// });
+	<!--   </script> -->
+
+</body>
+
 </html>
